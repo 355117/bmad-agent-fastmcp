@@ -1,0 +1,111 @@
+# BMAD Core Installation Manifest
+# This file tracks the installation and version of BMAD core components
+
+manifest:
+  version: "1.0.0"
+  install_date: "2025-01-01"
+  components:
+    agents: 10
+    workflows: 6
+    tasks: 19
+    templates: 11
+    checklists: 6
+    utils: 3
+    data: 2
+    agent_teams: 4
+
+installation:
+  method: "bmad-method"
+  source: "https://github.com/bmadcode/BMAD-METHOD"
+  commands:
+    - "npx bmad-method install"
+    - "git pull && npm run install:bmad"
+
+components:
+  agents:
+    - pm.md
+    - dev.md
+    - analyst.md
+    - architect.md
+    - qa.md
+    - ux-expert.md
+    - po.md
+    - sm.md
+    - bmad-master.md
+    - bmad-orchestrator.md
+
+  workflows:
+    - greenfield-fullstack.yaml
+    - greenfield-service.yaml
+    - greenfield-ui.yaml
+    - brownfield-fullstack.yaml
+    - brownfield-service.yaml
+    - brownfield-ui.yaml
+
+  tasks:
+    - create-doc.md
+    - create-next-story.md
+    - advanced-elicitation.md
+    - brainstorming-techniques.md
+    - brownfield-create-epic.md
+    - brownfield-create-story.md
+    - correct-course.md
+    - create-brownfield-story.md
+    - create-deep-research-prompt.md
+    - create-workflow-plan.md
+    - doc-migration-task.md
+    - document-project.md
+    - execute-checklist.md
+    - generate-ai-frontend-prompt.md
+    - index-docs.md
+    - kb-mode-interaction.md
+    - review-story.md
+    - shard-doc.md
+    - update-workflow-plan.md
+
+  templates:
+    - prd-tmpl.md
+    - project-brief-tmpl.md
+    - architecture-tmpl.md
+    - story-tmpl.md
+    - front-end-spec-tmpl.md
+    - front-end-architecture-tmpl.md
+    - fullstack-architecture-tmpl.md
+    - brownfield-architecture-tmpl.md
+    - brownfield-prd-tmpl.md
+    - market-research-tmpl.md
+    - competitor-analysis-tmpl.md
+
+  checklists:
+    - architect-checklist.md
+    - pm-checklist.md
+    - po-master-checklist.md
+    - story-dod-checklist.md
+    - story-draft-checklist.md
+    - change-checklist.md
+
+  utils:
+    - template-format.md
+    - workflow-management.md
+    - plan-management.md
+
+  data:
+    - bmad-kb.md
+    - technical-preferences.md
+
+  agent_teams:
+    - team-all.yaml
+    - team-fullstack.yaml
+    - team-ide-minimal.yaml
+    - team-no-ui.yaml
+
+validation:
+  required_files: 64
+  optional_files: 0
+  total_size: "~2MB"
+
+update_info:
+  check_command: "npx bmad-method --version"
+  update_command: "npx bmad-method install"
+  backup_command: "git stash"
+  restore_command: "git stash pop"

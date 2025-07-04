@@ -1,0 +1,118 @@
+workflow:
+  id: brownfield-fullstack
+  name: Brownfield Full-Stack Enhancement
+  description: >
+    Agent workflow for enhancing existing full-stack applications with new features,
+    modernization, or significant changes. Handles existing system analysis and safe integration.
+  type: brownfield
+  project_types:
+    - feature-addition
+    - refactoring
+    - modernization
+    - integration-enhancement
+
+  sequence:
+    - step: enhancement_classification
+      agent: analyst
+      action: classify enhancement scope
+      notes: |
+        Determine enhancement complexity to route to appropriate path:
+        - Single story (< 4 hours) → Use brownfield-create-story task
+        - Small feature (1-3 stories) → Use brownfield-create-epic task  
+        - Major enhancement (multiple epics) → Continue with full workflow
+        
+        Ask user: "Can you describe the enhancement scope? Is this a small fix, a feature addition, or a major enhancement requiring architectural changes?"
+
+    - step: routing_decision
+      condition: based_on_classification
+      routes:
+        single_story:
+          agent: pm
+          uses: brownfield-create-story
+          notes: "Create single story for immediate implementation. Exit workflow after story creation."
+        small_feature:
+          agent: pm
+          uses: brownfield-create-epic
+          notes: "Create focused epic with 1-3 stories. Exit workflow after epic creation."
+        major_enhancement:
+          continue: to_next_step
+          notes: "Continue with comprehensive planning workflow below."
+
+    - step: documentation_check
+      agent: analyst
+      action: check existing documentation
+      condition: major_enhancement_path
+      notes: |
+        Check if adequate project documentation exists:
+        - Look for existing architecture docs, API specs, coding standards
+        - Assess if documentation is current and comprehensive
+        - If adequate: Skip document-project, proceed to PRD
+        - If inadequate: Run document-project first
+
+    - step: document_existing_system
+      agent: analyst
+      action: document current system
+      condition: inadequate_documentation
+      uses: document-project
+      notes: "Document existing architecture, APIs, data models, and business logic before planning enhancements."
+
+    - step: requirements_definition
+      agent: pm
+      creates: enhancement-prd.md
+      requires: system documentation
+      uses: brownfield-prd-tmpl
+      notes: "Create PRD focused on enhancements while considering existing system constraints."
+
+    - step: impact_analysis
+      agent: architect
+      action: analyze enhancement impact
+      requires: enhancement-prd.md
+      notes: "Assess impact on existing architecture, identify integration points, and flag potential risks."
+
+    - step: architecture_design
+      agent: architect
+      creates: enhancement-architecture.md
+      requires: impact analysis
+      uses: brownfield-architecture-tmpl
+      notes: "Design enhancement architecture that integrates safely with existing system."
+
+    - step: implementation_planning
+      agent: po
+      creates: enhancement-backlog.md
+      requires: enhancement-architecture.md
+      notes: "Break down enhancements into implementable stories with clear acceptance criteria and dependencies."
+
+    - step: risk_assessment
+      agent: qa
+      action: assess implementation risks
+      requires: enhancement-backlog.md
+      notes: "Review implementation plan for risks, testing requirements, and rollback strategies."
+
+    - step: development_readiness
+      agent: dev
+      action: validate development readiness
+      requires: risk assessment
+      notes: "Confirm technical approach, identify blockers, and validate story completeness."
+
+  deliverables:
+    - System documentation (if needed)
+    - Enhancement PRD
+    - Impact analysis
+    - Enhancement architecture
+    - Implementation backlog
+    - Risk assessment
+    - Development-ready stories
+
+  success_criteria:
+    - Clear understanding of existing system
+    - Well-defined enhancement requirements
+    - Safe integration architecture
+    - Risk-aware implementation plan
+    - Development team ready to proceed
+
+  quality_gates:
+    - Existing system adequately documented
+    - Enhancement requirements validated
+    - Architecture review completed
+    - Implementation risks assessed
+    - Stories meet definition of ready
