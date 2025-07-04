@@ -7,14 +7,13 @@
 
 > 🚀 **企业级智能体调用服务** - 基于 FastMCP 框架的专业 AI 智能体系统，支持双 LLM 模式，提供 25+ 个专业 MCP 工具和 10 个专业智能体，与 Cursor IDE 无缝集成。
 
-## 🌟 项目亮点
+## 🌟 核心亮点
 
-- **🤖 10 个专业智能体**: 业务分析师、架构师、全栈开发者、产品经理、QA 工程师等
-- **🔧 25+ 个 MCP 工具**: 完整的智能体管理、工作流程控制、任务执行系统
-- **🔄 双 LLM 模式**: 支持 Cursor 内置 LLM 和 DeepSeek API 动态切换
-- **📋 6 个完整工作流程**: 全栈开发、API 开发、数据分析等端到端流程
-- **🎯 即插即用**: 与 Cursor IDE 完美集成，零配置启动
-- **🏢 企业级架构**: 模块化设计，易于扩展和维护
+- **🤖 10 个专业智能体**：业务分析师、架构师、全栈开发者、产品经理、QA 工程师等
+- **🔧 25+ 个 MCP 工具**：智能体管理、工作流程控制、任务执行系统
+- **🔄 双 LLM 模式**：支持 Cursor 内置 LLM 和 DeepSeek API 动态切换
+- **📋 6 个工作流程**：全栈开发、API 开发、数据分析等完整流程
+- **🎯 即插即用**：与 Cursor IDE 无缝集成
 
 ## 🚀 快速开始
 
@@ -44,25 +43,10 @@ python bmad_agent_mcp.py
 ## ⭐ 核心特性
 
 - **🤖 10 个专业智能体**：业务分析师、架构师、开发者、产品经理等
-- **🔧 25 个 MCP 工具**：智能体管理、工作流程、任务执行、模板处理
+- **🔧 25 个 MCP 工具**：智能体管理、工作流程控制、任务执行、模板处理
 - **🔄 双 LLM 模式**：支持 Cursor 内置 LLM 和 DeepSeek API 动态切换
 - **📋 6 个工作流程**：全栈开发、API 开发、数据分析等完整流程
 - **🎯 即插即用**：与 Cursor IDE 无缝集成
-
-## 🎭 可用智能体
-
-| 智能体 | 角色 | 专长 |
-|--------|------|------|
-| Mary | Business Analyst | 业务分析、需求梳理 |
-| Winston | Solution Architect | 系统架构、技术选型 |
-| James | Full-Stack Developer | 全栈开发、代码实现 |
-| Sarah | Product Manager | 产品规划、项目管理 |
-| Alex | QA Engineer | 质量保证、测试策略 |
-| Emma | UX Designer | 用户体验、界面设计 |
-| David | DevOps Engineer | 部署运维、CI/CD |
-| Lisa | Data Analyst | 数据分析、报表生成 |
-| BMad Master | BMAD 主控制器 | 任务协调、流程管理 |
-| BMad Orchestrator | BMAD 编排器 | 工作流程编排 |
 
 ## 🔄 LLM 模式切换
 
@@ -83,7 +67,7 @@ python bmad_agent_mcp.py
 # 在 Cursor 中使用
 switch_llm_mode('builtin')   # 切换到内置模式
 switch_llm_mode('external')  # 切换到外部模式
-get_llm_mode_info()         # 查看模式信息
+get_llm_mode_info()          # 查看模式信息
 ```
 
 ## 🛠️ 主要 MCP 工具
@@ -111,18 +95,18 @@ get_llm_mode_info()         # 查看模式信息
 - `list_templates()` - 列出所有模板
 - `get_template(template_name)` - 获取模板内容
 
-## 📁 项目结构
+## 📊 项目结构
 
 ```
 📂 根目录
-├── 📄 bmad_agent_mcp.py     # 主服务文件
-├── 📄 llm_client.py         # LLM 客户端
-├── 📄 utils.py              # 工具函数
-├── 📄 requirements.txt      # 依赖文件
-├── 📁 .bmad-core/           # 核心数据目录
-├── 📁 docs/                 # 文档目录
-├── 📁 tests/                # 测试目录
-└── 📁 archive/              # 归档目录
+├── 📄 bmad_agent_mcp.py      # 主服务文件
+├── 📄 llm_client.py          # LLM 客户端
+├── 📄 utils.py               # 工具函数
+├── 📄 requirements.txt       # 依赖文件
+├── 📂 .bmad-core/            # 核心数据目录
+├── 📁 docs/                  # 文档目录
+├── 📁 tests/                 # 测试目录
+└── 📁 archive/               # 归档目录
 ```
 
 ## 📚 文档
@@ -130,7 +114,7 @@ get_llm_mode_info()         # 查看模式信息
 - **📖 [项目结构说明](PROJECT_STRUCTURE.md)** - 详细的项目结构和文件说明
 - **🔄 [LLM 切换指南](docs/LLM_SWITCH_GUIDE.md)** - LLM 模式切换详细指南
 - **🎯 [Cursor 使用指南](docs/CURSOR_USAGE_GUIDE.md)** - Cursor IDE 集成指南
-- **📊 [最终解决方案](docs/FINAL_SOLUTION_REPORT.md)** - 完整的解决方案报告
+- **🔍 [最终解决方案](docs/FINAL_SOLUTION_REPORT.md)** - 完整的解决方案报告
 
 ## 🧪 测试
 
@@ -169,9 +153,9 @@ python tests/quick_llm_test.py
 
 ### 环境变量
 ```bash
-USE_BUILTIN_LLM=true              # 使用内置 LLM
-DEEPSEEK_API_KEY=your_key_here    # DeepSeek API Key（可选）
-PYTHONIOENCODING=utf-8            # 字符编码
+USE_BUILTIN_LLM=true                # 使用内置 LLM
+DEEPSEEK_API_KEY=your_key_here     # DeepSeek API Key（可选）
+PYTHONIOENCODING=utf-8             # 字符编码
 ```
 
 ## 🎯 使用示例
@@ -204,12 +188,40 @@ AI: 调用 switch_llm_mode('external')
 
 MIT License
 
-## 🆘 支持
+## 📚 相关
 
 - 📖 查看 `docs/` 目录中的详细文档
 - 🧪 运行 `tests/` 目录中的测试文件
 - 📋 查看 `logs/` 目录中的日志文件
-- 📦 参考 `archive/` 目录中的历史文件
+- 📦 查看 `archive/` 目录中的历史文件
+
+## 🎯 BMAD 方法论
+
+本项目基于 [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD) 构建，这是一个强大的业务模型和架构开发方法论。
+
+### 🚀 Important: Keep Your BMad Installation Updated 
+
+Stay up-to-date effortlessly! If you already have BMad-METHOD installed in your project, simply run:
+
+```bash
+npx bmad-method install
+# OR
+git pull
+npm run install:bmad
+```
+
+### 📦 First Time Installation
+
+If you're new to BMAD-METHOD, visit the official repository for complete installation and setup instructions:
+
+👉 **[BMAD-METHOD Official Repository](https://github.com/bmadcode/BMAD-METHOD)**
+
+The BMAD-METHOD provides:
+- 🎯 Structured business analysis frameworks
+- 🏗️ Architecture design patterns
+- 📋 Project management templates
+- 🔄 Workflow automation tools
+- 📊 Quality assurance checklists
 
 ---
 
