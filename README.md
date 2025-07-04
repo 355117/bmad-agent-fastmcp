@@ -166,7 +166,7 @@ python tests/quick_llm_test.py
 
 ```json
 {
-  "mcpServers\": {
+  "mcpServers": {
     "bmad-agent": {
       "command": "python",
       "args": ["D:\\234ffff\\bmad_agent_mcp.py"],
