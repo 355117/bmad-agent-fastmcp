@@ -1,0 +1,68 @@
+workflow:
+  id: greenfield-ui
+  name: Greenfield UI Development
+  description: >
+    Agent workflow for building new user interfaces or frontend applications from scratch.
+    Focuses on UX design, frontend architecture, and component development.
+  type: greenfield
+  project_types:
+    - web-app-frontend
+    - mobile-app
+    - dashboard
+    - component-library
+
+  sequence:
+    - agent: analyst
+      creates: ui-brief.md
+      optional_steps:
+        - user_research
+        - competitive_analysis
+      notes: "Create UI project brief focusing on user needs and interface requirements."
+
+    - agent: pm
+      creates: ui-prd.md
+      requires: ui-brief.md
+      uses: prd-tmpl
+      notes: "Create PRD with focus on user experience, interface requirements, and user stories."
+
+    - agent: ux-expert
+      creates: ui-specification.md
+      requires: ui-prd.md
+      uses: front-end-spec-tmpl
+      notes: "Design comprehensive UI/UX specification with wireframes and user flows."
+
+    - agent: ux-expert
+      creates: ui-generation-prompt (optional)
+      requires: ui-specification.md
+      condition: user_wants_ai_generation
+      uses: generate-ai-frontend-prompt
+      notes: "Generate AI prompt for UI generation tools like v0, Lovable, etc."
+
+    - agent: architect
+      creates: frontend-architecture.md
+      requires: ui-specification.md
+      uses: front-end-architecture-tmpl
+      notes: "Design frontend architecture, component structure, and state management."
+
+    - agent: po
+      creates: ui-backlog.md
+      requires: frontend-architecture.md
+      notes: "Break down UI development into implementable stories and components."
+
+    - agent: dev
+      action: validate_frontend_approach
+      requires: ui-backlog.md
+      notes: "Review frontend technical approach and validate development readiness."
+
+  deliverables:
+    - UI project brief
+    - UI/UX PRD
+    - UI specification and designs
+    - Frontend architecture
+    - Development backlog
+
+  success_criteria:
+    - Clear user experience vision
+    - Comprehensive UI designs
+    - Scalable frontend architecture
+    - Implementation-ready stories

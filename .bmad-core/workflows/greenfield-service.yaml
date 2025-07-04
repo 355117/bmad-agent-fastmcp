@@ -1,0 +1,55 @@
+workflow:
+  id: greenfield-service
+  name: Greenfield Service Development
+  description: >
+    Agent workflow for building new backend services, APIs, or microservices from scratch.
+    Focuses on service architecture, API design, and backend implementation.
+  type: greenfield
+  project_types:
+    - api-service
+    - microservice
+    - backend-service
+    - data-service
+
+  sequence:
+    - agent: analyst
+      creates: service-brief.md
+      optional_steps:
+        - technical_research
+        - integration_analysis
+      notes: "Create service brief focusing on backend requirements and integration needs."
+
+    - agent: pm
+      creates: service-prd.md
+      requires: service-brief.md
+      uses: prd-tmpl
+      notes: "Create PRD with focus on API requirements, data models, and service contracts."
+
+    - agent: architect
+      creates: service-architecture.md
+      requires: service-prd.md
+      uses: architecture-tmpl
+      notes: "Design service architecture, API specifications, data models, and deployment strategy."
+
+    - agent: po
+      creates: service-backlog.md
+      requires: service-architecture.md
+      notes: "Break down service development into implementable stories and epics."
+
+    - agent: dev
+      action: validate_technical_approach
+      requires: service-backlog.md
+      notes: "Review technical approach and validate development readiness."
+
+  deliverables:
+    - Service project brief
+    - Service PRD with API requirements
+    - Service architecture specification
+    - Development backlog
+    - Technical validation
+
+  success_criteria:
+    - Clear service requirements
+    - Well-defined API contracts
+    - Scalable service architecture
+    - Implementation-ready backlog
