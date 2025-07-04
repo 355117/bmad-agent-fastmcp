@@ -1,0 +1,89 @@
+workflow:
+  id: brownfield-ui
+  name: Brownfield UI Enhancement
+  description: >
+    Agent workflow for enhancing existing user interfaces, adding new features,
+    or modernizing frontend applications.
+  type: brownfield
+  project_types:
+    - ui-feature-addition
+    - frontend-modernization
+    - ux-improvement
+    - component-enhancement
+
+  sequence:
+    - step: enhancement_classification
+      agent: analyst
+      action: classify UI enhancement scope
+      notes: |
+        Determine enhancement complexity:
+        - Single component/page → Use brownfield-create-story
+        - Small UI feature → Use brownfield-create-epic
+        - Major UI overhaul → Continue with full workflow
+
+    - step: routing_decision
+      condition: based_on_classification
+      routes:
+        single_component:
+          agent: pm
+          uses: brownfield-create-story
+          notes: "Create single story for component enhancement."
+        small_feature:
+          agent: pm
+          uses: brownfield-create-epic
+          notes: "Create focused epic for UI feature."
+        major_enhancement:
+          continue: to_next_step
+
+    - step: ui_analysis
+      agent: ux-expert
+      action: analyze existing UI
+      condition: major_enhancement_path
+      notes: "Document current UI patterns, user flows, design system, and pain points."
+
+    - step: requirements_definition
+      agent: pm
+      creates: ui-enhancement-prd.md
+      requires: ui analysis
+      uses: brownfield-prd-tmpl
+      notes: "Create PRD focused on UI/UX improvements and new features."
+
+    - step: ux_design
+      agent: ux-expert
+      creates: ui-specification.md
+      requires: ui-enhancement-prd.md
+      uses: front-end-spec-tmpl
+      notes: "Design enhanced UI/UX with wireframes, user flows, and interaction patterns."
+
+    - step: frontend_architecture
+      agent: architect
+      creates: frontend-architecture.md
+      requires: ui-specification.md
+      uses: front-end-architecture-tmpl
+      notes: "Design frontend architecture, component structure, and integration approach."
+
+    - step: implementation_planning
+      agent: po
+      creates: ui-implementation-plan.md
+      requires: frontend-architecture.md
+      notes: "Break down UI changes into implementable stories with clear acceptance criteria."
+
+    - step: development_readiness
+      agent: dev
+      action: validate development readiness
+      requires: ui-implementation-plan.md
+      notes: "Review UI stories for technical feasibility and implementation approach."
+
+  deliverables:
+    - Current UI analysis
+    - UI enhancement PRD
+    - Enhanced UI specification
+    - Frontend architecture plan
+    - Implementation roadmap
+
+  success_criteria:
+    - Clear understanding of current UI state
+    - Well-defined enhancement requirements
+    - Comprehensive UI/UX design
+    - Technical implementation plan
+    - Development-ready stories
