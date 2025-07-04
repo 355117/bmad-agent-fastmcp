@@ -1,0 +1,110 @@
+# Backend/Service Team Configuration
+# Specialized team for backend services, APIs, and non-UI development
+
+team:
+  id: team-no-ui
+  name: "Backend Service Team"
+  description: "Specialized team for backend services, APIs, microservices, and data-focused development"
+  use_case: "Backend services, APIs, microservices, data processing, infrastructure"
+
+agents:
+  - id: analyst
+    name: "Mary"
+    role: "Business Analyst"
+    primary_focus: "Business logic and data requirements"
+    responsibilities:
+      - Business process analysis
+      - Data requirements gathering
+      - Integration requirements
+      - Service specifications
+
+  - id: architect
+    name: "Winston"
+    role: "Solution Architect"
+    primary_focus: "Backend architecture and system design"
+    responsibilities:
+      - Service architecture design
+      - API design and specifications
+      - Data architecture and modeling
+      - Integration patterns and protocols
+      - Performance and scalability planning
+
+  - id: dev
+    name: "Alex"
+    role: "Backend Developer"
+    primary_focus: "Server-side implementation"
+    responsibilities:
+      - Backend service development
+      - API implementation
+      - Database design and optimization
+      - Integration development
+      - Performance optimization
+
+  - id: qa
+    name: "Quinn"
+    role: "QA Engineer"
+    primary_focus: "Backend testing and validation"
+    responsibilities:
+      - API testing and validation
+      - Integration testing
+      - Performance testing
+      - Security testing
+      - Data validation and integrity
+
+  - id: pm
+    name: "James"
+    role: "Product Manager"
+    primary_focus: "Service strategy and coordination"
+    responsibilities:
+      - Service roadmap planning
+      - API product management
+      - Integration planning
+      - Stakeholder coordination
+
+workflow_coverage:
+  - greenfield-service
+  - brownfield-service
+
+technology_focus:
+  - Backend frameworks and languages
+  - Database systems (SQL, NoSQL, Graph)
+  - API design (REST, GraphQL, gRPC)
+  - Microservices architecture
+  - Message queues and event streaming
+  - Cloud services and infrastructure
+  - DevOps and deployment
+  - Monitoring and observability
+
+deliverables:
+  - Backend services and APIs
+  - Database schemas and models
+  - Integration specifications
+  - Performance and scalability plans
+  - Testing and validation strategies
+  - Documentation and specifications
+
+service_types:
+  - REST APIs
+  - GraphQL services
+  - Microservices
+  - Data processing pipelines
+  - Integration services
+  - Authentication and authorization
+  - Notification services
+  - Analytics and reporting
+
+recommended_for:
+  - API development
+  - Microservices architecture
+  - Data processing systems
+  - Integration projects
+  - Backend modernization
+  - Service-oriented architecture
+  - Cloud-native development
+
+performance_focus:
+  - Scalability and performance
+  - Reliability and availability
+  - Security and compliance
+  - Monitoring and observability
+  - Cost optimization

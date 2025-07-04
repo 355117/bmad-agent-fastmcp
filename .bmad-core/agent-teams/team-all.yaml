@@ -1,0 +1,92 @@
+# Complete BMAD Agent Team Configuration
+# Includes all available agents for comprehensive project coverage
+
+team:
+  id: team-all
+  name: "Complete BMAD Team"
+  description: "Full team with all available BMAD agents for comprehensive project coverage"
+  use_case: "Large projects requiring all disciplines and comprehensive coverage"
+
+agents:
+  - id: analyst
+    name: "Mary"
+    role: "Business Analyst"
+    primary_focus: "Requirements analysis and business logic"
+    when_to_use: "Business analysis, requirements gathering, market research"
+
+  - id: architect
+    name: "Winston"
+    role: "Solution Architect"
+    primary_focus: "System architecture and technical design"
+    when_to_use: "Architecture design, technology selection, system planning"
+
+  - id: pm
+    name: "James"
+    role: "Product Manager"
+    primary_focus: "Product strategy and roadmap"
+    when_to_use: "Product planning, feature prioritization, stakeholder management"
+
+  - id: dev
+    name: "Alex"
+    role: "Full-Stack Developer"
+    primary_focus: "Implementation and code development"
+    when_to_use: "Coding, technical implementation, code review"
+
+  - id: qa
+    name: "Quinn"
+    role: "QA Engineer"
+    primary_focus: "Quality assurance and testing"
+    when_to_use: "Testing strategy, quality validation, bug analysis"
+
+  - id: ux-expert
+    name: "Sally"
+    role: "UX Expert"
+    primary_focus: "User experience and interface design"
+    when_to_use: "UI/UX design, user research, interface optimization"
+
+  - id: po
+    name: "Sarah"
+    role: "Product Owner"
+    primary_focus: "Backlog management and story refinement"
+    when_to_use: "Story creation, backlog prioritization, acceptance criteria"
+
+  - id: sm
+    name: "Alex"
+    role: "Scrum Master"
+    primary_focus: "Process facilitation and team coordination"
+    when_to_use: "Sprint planning, process improvement, team facilitation"
+
+  - id: bmad-master
+    name: "BMAD Master"
+    role: "Universal Task Executor"
+    primary_focus: "Direct execution of any BMAD resource"
+    when_to_use: "Multi-domain expertise, rapid context switching"
+
+  - id: bmad-orchestrator
+    name: "BMAD Orchestrator"
+    role: "Workflow Coordinator"
+    primary_focus: "Multi-agent coordination and process management"
+    when_to_use: "Complex workflows, agent coordination, process orchestration"
+
+workflow_coverage:
+  - greenfield-fullstack
+  - greenfield-service
+  - greenfield-ui
+  - brownfield-fullstack
+  - brownfield-service
+  - brownfield-ui
+
+capabilities:
+  - Complete project lifecycle coverage
+  - All technical disciplines represented
+  - Business and technical perspectives
+  - Quality assurance and user experience
+  - Process management and coordination
+  - Flexible workflow execution
+
+recommended_for:
+  - Large enterprise projects
+  - Complex multi-disciplinary initiatives
+  - Projects requiring comprehensive coverage
+  - Teams needing all BMAD capabilities
+  - Training and demonstration purposes

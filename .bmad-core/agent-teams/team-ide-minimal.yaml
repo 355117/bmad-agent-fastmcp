@@ -1,0 +1,84 @@
+# Minimal IDE Team Configuration
+# Streamlined team for quick development tasks and IDE integration
+
+team:
+  id: team-ide-minimal
+  name: "IDE Minimal Team"
+  description: "Streamlined team optimized for IDE integration and quick development tasks"
+  use_case: "IDE-based development, quick prototyping, individual developer support"
+
+agents:
+  - id: dev
+    name: "Alex"
+    role: "Full-Stack Developer"
+    primary_focus: "Code implementation and technical solutions"
+    ide_integration: "primary"
+    responsibilities:
+      - Code generation and refactoring
+      - Technical problem solving
+      - Architecture recommendations
+      - Code review and optimization
+
+  - id: analyst
+    name: "Mary"
+    role: "Business Analyst"
+    primary_focus: "Requirements clarification"
+    ide_integration: "secondary"
+    responsibilities:
+      - Requirement analysis
+      - Feature specification
+      - Business logic clarification
+      - User story creation
+
+  - id: bmad-master
+    name: "BMAD Master"
+    role: "Universal Executor"
+    primary_focus: "Multi-domain task execution"
+    ide_integration: "utility"
+    responsibilities:
+      - Execute any BMAD task directly
+      - Cross-domain expertise
+      - Rapid context switching
+      - Resource coordination
+
+workflow_coverage:
+  - Quick development tasks
+  - Code generation and refactoring
+  - Feature implementation
+  - Bug fixes and improvements
+  - Documentation generation
+
+ide_optimizations:
+  - Fast response times
+  - Minimal context switching
+  - Direct code assistance
+  - Inline documentation
+  - Quick problem resolution
+
+capabilities:
+  - Code generation and completion
+  - Technical documentation
+  - Architecture guidance
+  - Requirements clarification
+  - Multi-language support
+
+use_cases:
+  - Individual developer workflow
+  - Quick prototyping
+  - Code assistance and review
+  - Technical problem solving
+  - Learning and exploration
+
+recommended_for:
+  - Solo developers
+  - Quick development tasks
+  - IDE-integrated workflows
+  - Learning and experimentation
+  - Rapid prototyping
+
+performance_focus:
+  - Low latency responses
+  - Minimal resource usage
+  - Efficient task execution
+  - Streamlined workflows
+  - Direct IDE integration

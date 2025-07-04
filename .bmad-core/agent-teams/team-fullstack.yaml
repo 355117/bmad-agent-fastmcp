@@ -1,0 +1,106 @@
+# Full-Stack Development Team Configuration
+# Optimized for complete web application development
+
+team:
+  id: team-fullstack
+  name: "Full-Stack Development Team"
+  description: "Specialized team for complete web application development from concept to deployment"
+  use_case: "Full-stack web applications, complete product development"
+
+agents:
+  - id: analyst
+    name: "Mary"
+    role: "Business Analyst"
+    primary_focus: "Requirements and business logic"
+    responsibilities:
+      - Market research and competitive analysis
+      - User requirements gathering
+      - Business process analysis
+      - Stakeholder communication
+
+  - id: pm
+    name: "James"
+    role: "Product Manager"
+    primary_focus: "Product strategy and planning"
+    responsibilities:
+      - Product roadmap development
+      - Feature prioritization
+      - PRD creation and management
+      - Cross-functional coordination
+
+  - id: architect
+    name: "Winston"
+    role: "Solution Architect"
+    primary_focus: "Full-stack architecture"
+    responsibilities:
+      - System architecture design
+      - Technology stack selection
+      - API design and integration
+      - Performance and scalability planning
+
+  - id: ux-expert
+    name: "Sally"
+    role: "UX Expert"
+    primary_focus: "User experience and frontend design"
+    responsibilities:
+      - UI/UX design and wireframing
+      - User journey mapping
+      - Frontend specifications
+      - Accessibility and usability
+
+  - id: dev
+    name: "Alex"
+    role: "Full-Stack Developer"
+    primary_focus: "Frontend and backend implementation"
+    responsibilities:
+      - Frontend development
+      - Backend API development
+      - Database design and implementation
+      - Integration and deployment
+
+  - id: qa
+    name: "Quinn"
+    role: "QA Engineer"
+    primary_focus: "Quality assurance across the stack"
+    responsibilities:
+      - Test strategy and planning
+      - Frontend and backend testing
+      - Integration testing
+      - Performance and security testing
+
+  - id: po
+    name: "Sarah"
+    role: "Product Owner"
+    primary_focus: "Backlog and story management"
+    responsibilities:
+      - User story creation and refinement
+      - Acceptance criteria definition
+      - Sprint planning support
+      - Quality gate validation
+
+workflow_coverage:
+  - greenfield-fullstack
+  - brownfield-fullstack
+
+technology_focus:
+  - Frontend frameworks (React, Vue, Angular)
+  - Backend frameworks (Node.js, Python, Java)
+  - Databases (SQL, NoSQL)
+  - Cloud platforms and deployment
+  - API design and integration
+  - DevOps and CI/CD
+
+deliverables:
+  - Complete web applications
+  - Responsive user interfaces
+  - Scalable backend services
+  - Comprehensive documentation
+  - Testing and quality assurance
+  - Deployment and monitoring
+
+recommended_for:
+  - Web application development
+  - SaaS product development
+  - E-commerce platforms
+  - Enterprise web solutions
+  - Startup MVP development
