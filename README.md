@@ -5,6 +5,36 @@
 [![FastMCP](https://img.shields.io/badge/FastMCP-Compatible-green.svg)](https://github.com/jlowin/fastmcp)
 [![Cursor IDE](https://img.shields.io/badge/Cursor-IDE-purple.svg)](https://cursor.sh/)
 
+## 🎯 BMAD 方法论
+
+本项目基于 [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD) 构建，这是一个强大的业务模型和架构开发方法论。
+
+### 🚀 Important: Keep Your BMad Installation Updated 
+
+Stay up-to-date effortlessly! If you already have BMad-METHOD installed in your project, simply run:
+
+```bash
+npx bmad-method install
+# OR
+git pull
+npm run install:bmad
+```
+
+### 📦 First Time Installation
+
+If you're new to BMAD-METHOD, visit the official repository for complete installation and setup instructions:
+
+👉 **[BMAD-METHOD Official Repository](https://github.com/bmadcode/BMAD-METHOD)**
+
+The BMAD-METHOD provides:
+- 🎯 Structured business analysis frameworks
+- 🏗️ Architecture design patterns
+- 📋 Project management templates
+- 🔄 Workflow automation tools
+- 📊 Quality assurance checklists
+
+---
+
 > 🚀 **企业级智能体调用服务** - 基于 FastMCP 框架的专业 AI 智能体系统，支持双 LLM 模式，提供 25+ 个专业 MCP 工具和 10 个专业智能体，与 Cursor IDE 无缝集成。
 
 ## 🌟 核心亮点
@@ -136,15 +166,15 @@ python tests/quick_llm_test.py
 
 ```json
 {
-  "mcpServers": {
-    "bmad-agent": {
-      "command": "python",
-      "args": ["path/to/bmad_agent_mcp.py"],
-      "cwd": "path/to/project",
-      "env": {
-        "PYTHONPATH": "path/to/project",
-        "USE_BUILTIN_LLM": "true",
-        "PYTHONIOENCODING": "utf-8"
+  \"mcpServers\": {
+    \"bmad-agent\": {
+      \"command\": \"python\",
+      \"args\": [\"path/to/bmad_agent_mcp.py\"],
+      \"cwd\": \"path/to/project\",
+      \"env\": {
+        \"PYTHONPATH\": \"path/to/project\",
+        \"USE_BUILTIN_LLM\": \"true\",
+        \"PYTHONIOENCODING\": \"utf-8\"
       }
     }
   }
@@ -163,15 +193,15 @@ PYTHONIOENCODING=utf-8             # 字符编码
 ### 在 Cursor 中使用
 
 ```
-用户: "请列出所有可用的 BMAD 智能体"
+用户: \"请列出所有可用的 BMAD 智能体\"
 AI: 调用 list_agents()
 返回: 10 个专业智能体列表
 
-用户: "请使用业务分析师分析电商平台需求"
+用户: \"请使用业务分析师分析电商平台需求\"
 AI: 调用 call_agent_with_llm('analyst', '分析电商平台需求')
 返回: 专业的业务分析结果
 
-用户: "请切换到 DeepSeek API 模式"
+用户: \"请切换到 DeepSeek API 模式\"
 AI: 调用 switch_llm_mode('external')
 返回: 已切换到外部 API 模式
 ```
@@ -194,34 +224,6 @@ MIT License
 - 🧪 运行 `tests/` 目录中的测试文件
 - 📋 查看 `logs/` 目录中的日志文件
 - 📦 查看 `archive/` 目录中的历史文件
-
-## 🎯 BMAD 方法论
-
-本项目基于 [BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD) 构建，这是一个强大的业务模型和架构开发方法论。
-
-### 🚀 Important: Keep Your BMad Installation Updated 
-
-Stay up-to-date effortlessly! If you already have BMad-METHOD installed in your project, simply run:
-
-```bash
-npx bmad-method install
-# OR
-git pull
-npm run install:bmad
-```
-
-### 📦 First Time Installation
-
-If you're new to BMAD-METHOD, visit the official repository for complete installation and setup instructions:
-
-👉 **[BMAD-METHOD Official Repository](https://github.com/bmadcode/BMAD-METHOD)**
-
-The BMAD-METHOD provides:
-- 🎯 Structured business analysis frameworks
-- 🏗️ Architecture design patterns
-- 📋 Project management templates
-- 🔄 Workflow automation tools
-- 📊 Quality assurance checklists
 
 ---
 
