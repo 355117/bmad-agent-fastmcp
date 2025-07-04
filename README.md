@@ -1,4 +1,4 @@
-# 🤖 BMAD Agent FastMCP Service
+# 🎯 BMAD Agent FastMCP Service
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -35,12 +35,12 @@ The BMAD-METHOD provides:
 
 ---
 
-> 🚀 **企业级智能体调用服务** - 基于 FastMCP 框架的专业 AI 智能体系统，支持双 LLM 模式，提供 25+ 个专业 MCP 工具和 10 个专业智能体，与 Cursor IDE 无缝集成。
+> 🚀 **企业级智能服务** - 基于 FastMCP 框架的专业 AI 智能体服务，支持双 LLM 模式，提供 25+ 个专业 MCP 工具和 10 个专业智能体，与 Cursor IDE 无缝集成。
 
-## 🌟 核心亮点
+## 🌟 核心特性
 
-- **🤖 10 个专业智能体**：业务分析师、架构师、全栈开发者、产品经理、QA 工程师等
-- **🔧 25+ 个 MCP 工具**：智能体管理、工作流程控制、任务执行系统
+- **🎯 10 个专业智能体**：业务分析师、架构师、全栈开发者、产品经理、QA 工程师等
+- **🔧 25+ 个 MCP 工具**：智能体管理、工作流程控制、任务执行等
 - **🔄 双 LLM 模式**：支持 Cursor 内置 LLM 和 DeepSeek API 动态切换
 - **📋 6 个工作流程**：全栈开发、API 开发、数据分析等完整流程
 - **🎯 即插即用**：与 Cursor IDE 无缝集成
@@ -70,9 +70,9 @@ python bmad_agent_mcp.py
 ### 4. Cursor 集成
 参考 `docs/CURSOR_USAGE_GUIDE.md` 进行 Cursor IDE 集成配置。
 
-## ⭐ 核心特性
+## ⚡ 核心特性
 
-- **🤖 10 个专业智能体**：业务分析师、架构师、开发者、产品经理等
+- **🎯 10 个专业智能体**：业务分析师、架构师、开发者、产品经理等
 - **🔧 25 个 MCP 工具**：智能体管理、工作流程控制、任务执行、模板处理
 - **🔄 双 LLM 模式**：支持 Cursor 内置 LLM 和 DeepSeek API 动态切换
 - **📋 6 个工作流程**：全栈开发、API 开发、数据分析等完整流程
@@ -133,7 +133,7 @@ get_llm_mode_info()          # 查看模式信息
 ├── 📄 llm_client.py          # LLM 客户端
 ├── 📄 utils.py               # 工具函数
 ├── 📄 requirements.txt       # 依赖文件
-├── 📂 .bmad-core/            # 核心数据目录
+├── 📂 .bmad-core/            # 核心数据结构
 ├── 📁 docs/                  # 文档目录
 ├── 📁 tests/                 # 测试目录
 └── 📁 archive/               # 归档目录
@@ -144,7 +144,7 @@ get_llm_mode_info()          # 查看模式信息
 - **📖 [项目结构说明](PROJECT_STRUCTURE.md)** - 详细的项目结构和文件说明
 - **🔄 [LLM 切换指南](docs/LLM_SWITCH_GUIDE.md)** - LLM 模式切换详细指南
 - **🎯 [Cursor 使用指南](docs/CURSOR_USAGE_GUIDE.md)** - Cursor IDE 集成指南
-- **🔍 [最终解决方案](docs/FINAL_SOLUTION_REPORT.md)** - 完整的解决方案报告
+- **📝 [最终解决方案](docs/FINAL_SOLUTION_REPORT.md)** - 完整的解决方案报告
 
 ## 🧪 测试
 
@@ -184,9 +184,9 @@ python tests/quick_llm_test.py
 
 ### 环境变量
 ```bash
-USE_BUILTIN_LLM=true                # 使用内置 LLM
+USE_BUILTIN_LLM=true                    # 使用内置 LLM
 DEEPSEEK_API_KEY=your_key_here     # DeepSeek API Key（可选）
-PYTHONIOENCODING=utf-8             # 字符编码
+PYTHONIOENCODING=utf-8                  # 字符编码
 ```
 
 ## 🎯 使用示例
@@ -194,15 +194,15 @@ PYTHONIOENCODING=utf-8             # 字符编码
 ### 在 Cursor 中使用
 
 ```
-用户: \"请列出所有可用的 BMAD 智能体\"
+用户: "请列出所有可用的 BMAD 智能体"
 AI: 调用 list_agents()
 返回: 10 个专业智能体列表
 
-用户: \"请使用业务分析师分析电商平台需求\"
+用户: "请使用业务分析师分析电商平台需求"
 AI: 调用 call_agent_with_llm('analyst', '分析电商平台需求')
 返回: 专业的业务分析结果
 
-用户: \"请切换到 DeepSeek API 模式\"
+用户: "请切换到 DeepSeek API 模式"
 AI: 调用 switch_llm_mode('external')
 返回: 已切换到外部 API 模式
 ```
@@ -228,4 +228,4 @@ MIT License
 
 ---
 
-**🎉 享受使用 BMAD Agent FastMCP Service！**
+**🎉 享受使用 BMAD Agent FastMCP Service！**"
