@@ -1,0 +1,49 @@
+workflow:
+  id: greenfield-fullstack
+  name: Greenfield Full-Stack Application Development
+  description: >
+    Agent workflow for building full-stack applications from concept to development.
+    Supports both comprehensive planning for complex projects and rapid prototyping for simple ones.
+  type: greenfield
+  project_types:
+    - web-app
+    - saas
+    - enterprise-app
+    - prototype
+    - mvp
+
+  sequence:
+    - agent: analyst
+      creates: project-brief.md
+      optional_steps:
+        - brainstorming_session
+        - market_research_prompt
+      notes: "Can do brainstorming first, then optional deep research before creating project brief. SAVE OUTPUT: Copy final project-brief.md to your project's docs/ folder."
+
+    - agent: pm
+      creates: prd.md
+      requires: project-brief.md
+      notes: "Creates PRD from project brief using prd-tmpl. SAVE OUTPUT: Copy final prd.md to your project's docs/ folder."
+
+    - agent: ux-expert
+      creates: front-end-spec.md
+      requires: prd.md
+      optional_steps:
+        - user_research_prompt
+      notes: "Creates UI/UX specification using front-end-spec-tmpl. SAVE OUTPUT: Copy final front-end-spec.md to your project's docs/ folder."
+
+    - agent: ux-expert
+      creates: v0_prompt (optional)
+      requires: front-end-spec.md
+      condition: user_wants_ai_generation
+      notes: "OPTIONAL BUT RECOMMENDED: Generate AI UI prompt for tools like v0, Lovable, etc. Use the generate-ai-frontend-prompt task. User can then generate UI in external tool and download project structure."
+
+    - agent: architect
+      creates: fullstack-architecture.md
+      requires:
+        - prd.md
+        - front-end-spec.md
+      optional_steps:
+        - technical_research_prompt
+        - review_generated_ui_structure
+      notes: "Creates comprehensive architecture using fullstack-architecture-tmpl. If user generated UI with v0/Lovable, can incorporate the project structure into architecture. May suggest changes to PRD stories or new stories. SAVE OUTPUT: Copy final fullstack-architecture.md to your project's docs/ folder."
