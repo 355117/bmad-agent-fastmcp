@@ -166,15 +166,16 @@ python tests/quick_llm_test.py
 
 ```json
 {
-  \"mcpServers\": {
-    \"bmad-agent\": {
-      \"command\": \"python\",
-      \"args\": [\"path/to/bmad_agent_mcp.py\"],
-      \"cwd\": \"path/to/project\",
-      \"env\": {
-        \"PYTHONPATH\": \"path/to/project\",
-        \"USE_BUILTIN_LLM\": \"true\",
-        \"PYTHONIOENCODING\": \"utf-8\"
+  "mcpServers\": {
+    "bmad-agent": {
+      "command": "python",
+      "args": ["D:\\234ffff\\bmad_agent_mcp.py"],
+      "cwd": "D:\\234ffff",
+      "env": {
+        "PYTHONPATH": "D:\\234ffff",
+        "USE_BUILTIN_LLM": "true",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUNBUFFERED": "1"
       }
     }
   }
