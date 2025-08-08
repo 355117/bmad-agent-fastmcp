@@ -1,3 +1,5 @@
+每次任务都检查并告诉我是否激活master智能体，然后让master管理需求去完成任务
+
 # 🎯 BMAD Agent FastMCP Service
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
